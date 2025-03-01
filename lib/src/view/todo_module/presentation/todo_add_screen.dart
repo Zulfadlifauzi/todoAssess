@@ -102,7 +102,9 @@ class TodoAddScreen extends StatelessWidget {
                                   value.setPriceController.clear();
                                   value.setAccessbility = 0.0;
                                   value.setBookingRequired = false;
-                                  Navigator.pop(context);
+                                  if (context.mounted) {
+                                    Navigator.pop(context);
+                                  }
                                 }
                               },
                         child: value.getTodoLoading
